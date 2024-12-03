@@ -36,7 +36,7 @@
     
 
     <div class="container my-5">
-        <form action="https://www.bing.com/search?" id="UserEnter" method="POST" target="_blank">
+        <form action="https://www.bing.com/search?" id="UserEnter" target="_blank">
             <div class="mb-3">
                 <label for="yearInput" class="form-label">Введите год:</label>
                 <input type="number" id="yearInput" name="Year" class="form-control" value="2024" required>
@@ -57,15 +57,12 @@
             const year = parseInt(document.getElementById("yearInput").value);
             let isLeapYear = false;
 
-            // Проверяем, является ли год високосным
             if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
                 isLeapYear = true;
             }
-
-            // Определяем век
             const century = Math.ceil(year / 100);
 
-            // Формируем вывод
+      
             const resultContainer = document.getElementById("resultContainer");
             resultContainer.innerHTML = `
                 <h5 class="text-center">Результаты:</h5>
@@ -73,7 +70,7 @@
                 <p class="text-center">Этот год относится к ${century} веку.</p>
             `;
             
-            // Отправляем данные формы
+  
             document.getElementById("UserEnter").submit();
         }
     </script>

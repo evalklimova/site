@@ -4,10 +4,11 @@ body {
     padding: 0;
     background-color: aliceblue;
 }
+
 header {
     background-color: #394773;
     padding: 10px 20px;
-    color: aliceblue
+    color: aliceblue;
 }
 nav {
     display: flex;
